@@ -52,9 +52,15 @@
     "material": "steel",
     "symbol": "0",
     "color": "dark_gray",
-    "contains": "100 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "100 L",
+        "max_contains_weight": "250 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
@@ -71,14 +77,20 @@
     "material": "steel",
     "symbol": "0",
     "color": "dark_gray",
-    "contains": "200 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "200 L",
+        "max_contains_weight": "500 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "bag_canvas",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "canvas sack" },
     "description": "A large and sturdy canvas sack.  Smells faintly of earth and hard work.",
@@ -88,6 +100,14 @@
     "to_hit": -5,
     "rigid": false,
     "material": "cotton",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "moves": 400
+      }
+    ],
     "symbol": ")",
     "color": "brown",
     "contains": "15 L",
@@ -315,35 +335,48 @@
   },
   {
     "id": "bowl_clay",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "clay bowl" },
     "description": "A clay bowl with a waterproofed hide lid.  Can be used as a container or as a tool.  Holds 250 ml of liquid.",
     "weight": "60 g",
-    "volume": "250 ml",
+    "volume": "255 ml",
     "price": 100,
     "to_hit": -1,
     "material": "clay",
     "symbol": ")",
     "color": "brown",
-    "contains": "250 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "3 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "box_cigarette",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "pack" },
     "description": "SURGEON GENERAL'S WARNING: Smoking Causes Lung Cancer, Heart Disease, Emphysema And May Complicate Pregnancy.",
     "weight": "15 g",
-    "volume": "250 ml",
+    "volume": "253 ml",
     "price": 0,
     "material": "paper",
     "symbol": ")",
     "color": "white",
-    "contains": "250 ml"
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "3 kg"
+      }
+    ]
   },
   {
     "id": "box_small",
