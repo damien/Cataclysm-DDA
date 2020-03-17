@@ -1,7 +1,7 @@
 [
   {
     "id": "2lcanteen",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "2.5L canteen" },
     "description": "A large plastic water canteen, with a 2.5 liter capacity and carrying strap.",
@@ -13,15 +13,21 @@
     "material": "plastic",
     "symbol": ")",
     "color": "dark_gray",
-    "contains": "2500 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "5 kg"
+      }
+    ],
     "armor_data": { "covers": [ "TORSO" ], "coverage": 10, "encumbrance": 4, "material_thickness": 2 },
     "flags": [ "WAIST", "OVERSIZE", "WATER_FRIENDLY" ]
   },
   {
     "id": "30gal_barrel",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "30 gallon barrel" },
     "description": "A huge plastic barrel with a resealable lid.",
@@ -33,14 +39,20 @@
     "material": "plastic",
     "symbol": "0",
     "color": "light_blue",
-    "contains": "112500 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "112500 ml",
+        "max_contains_weight": "255 kg"
+      }
+    ],
     "qualities": [ [ "CONTAIN", 1 ] ]
   },
   {
     "id": "30gal_drum",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "steel drum (100L)", "str_pl": "steel drums (100L)" },
     "description": "A huge steel barrel with a resealable lid.",
@@ -65,7 +77,7 @@
   },
   {
     "id": "55gal_drum",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "steel drum (200L)", "str_pl": "steel drums (200L)" },
     "description": "A massive steel barrel with a resealable lid.",
@@ -263,7 +275,7 @@
   },
   {
     "id": "bottle_plastic",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "plastic bottle" },
     "description": "A resealable plastic bottle, holds 500 ml of liquid.",
@@ -386,6 +398,14 @@
     "description": "A small cardboard box.  No bigger than a foot in dimension.",
     "weight": "151 g",
     "volume": "1 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "990 ml",
+        "max_contains_weight": "4 kg"
+      }
+    ],
     "price": 0,
     "material": "cardboard",
     "symbol": ")",
@@ -402,14 +422,22 @@
     "volume": "2 L",
     "//": "Volume is much lower than the actual volume of a box this size because presumably if it's in your pack, it isn't empty and full of air; and if it's in your hands, it's irrelevant what the volume is.",
     "price": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "2990 ml",
+        "max_contains_weight": "20 kg",
+        "magazine_well": "2 L"
+      }
+    ],
     "material": "cardboard",
     "symbol": ")",
-    "color": "brown",
-    "contains": "3 L"
+    "color": "brown"
   },
   {
     "id": "box_large",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "large cardboard box", "str_pl": "large cardboard boxes" },
     "description": "A very large cardboard box, the sort children would have loved to hide in, when there were still children.",
@@ -420,7 +448,15 @@
     "material": "cardboard",
     "symbol": ")",
     "color": "brown",
-    "contains": "5 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "4990 ml",
+        "max_contains_weight": "50 kg",
+        "magazine_well": "3 L"
+      }
+    ],
     "use_action": { "type": "deploy_furn", "furn_type": "f_cardboard_box" }
   },
   {
@@ -435,8 +471,16 @@
     "material": "steel",
     "symbol": ")",
     "color": "light_gray",
-    "contains": "5 L",
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "open_container": true,
+        "max_contains_volume": "4990 ml",
+        "max_contains_weight": "20 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
@@ -446,7 +490,7 @@
     "name": { "str": "hydration pack" },
     "description": "A slim and lightweight insulated plastic bladder worn on the back.  It has a large pocket and a capped mouth for filling with liquid with a hose that allows the wearer to drink hands-free.",
     "weight": "286 g",
-    "volume": "2500 ml",
+    "volume": "2503 ml",
     "price": 10000,
     "to_hit": -1,
     "bashing": 1,
@@ -454,39 +498,53 @@
     "symbol": ")",
     "color": "dark_gray",
     "contains": "2 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "20 kg"
+      }
+    ],
     "armor_data": { "covers": [ "TORSO" ], "coverage": 15, "storage": "1 L", "material_thickness": 1 },
     "flags": [ "BELTED" ]
   },
   {
     "id": "can_drink",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "aluminum can" },
     "description": "An aluminum can, like what soda comes in.",
     "weight": "13 g",
-    "volume": "250 ml",
+    "volume": "253 ml",
     "price": 0,
     "to_hit": -3,
     "bashing": 2,
     "material": "aluminum",
     "symbol": ")",
     "color": "light_blue",
-    "contains": "250 ml",
-    "watertight": true,
-    "preserves": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "open_container": true,
+        "resealable": false,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg"
+      }
+    ],
     "unseals_into": "can_drink_unsealed"
   },
   {
     "id": "can_drink_unsealed",
     "copy-from": "can_drink",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "name": { "str": "opened aluminum can" },
     "description": "An aluminum can, like what soda comes in.  This one is opened and can't be easily sealed.",
     "symbol": ")",
     "color": "light_blue",
-    "preserves": false,
     "unseals_into": "null",
     "qualities": [ [ "CONTAIN", 1 ], [ "BOIL", 2 ] ]
   },
