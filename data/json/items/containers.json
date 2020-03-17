@@ -682,7 +682,7 @@
   },
   {
     "id": "canteen",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "plastic canteen" },
     "description": "A military-style water canteen with a 1.5 liter capacity.  Commonly worn at the hip.",
@@ -708,7 +708,7 @@
   },
   {
     "id": "thermos",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "thermos", "str_pl": "thermoses" },
     "description": "A Thermos brand vacuum flask.  Built for temperature retention, helps keep things hot or cold.  Contains 1L of liquid.",
@@ -731,44 +731,56 @@
   },
   {
     "id": "clay_canister",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "clay canister" },
     "description": "A fragile clay vessel.  It can be used to make crude impact grenades or to store liquid.",
     "weight": "268 g",
-    "volume": "250 ml",
+    "volume": "253 ml",
     "price": 1000,
     "to_hit": 1,
     "material": "clay",
     "symbol": "*",
     "color": "brown",
-    "contains": "250 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "clay_hydria",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "clay hydria" },
     "description": "A 15-liter clay pot with three handles for carrying and for pouring.",
     "weight": "1955 g",
-    "volume": "15 L",
+    "volume": "15003 ml",
     "price": 2000,
     "to_hit": -1,
     "bashing": 1,
     "material": "clay",
     "symbol": ")",
     "color": "brown",
-    "contains": "15 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "25 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "clay_watercont",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "large clay pot" },
     "description": "A bulky and heavy clay pot with a waterproofed hide lid, meant to store water, but can carry other liquids in a pinch.",
@@ -779,14 +791,20 @@
     "material": "clay",
     "symbol": ")",
     "color": "brown",
-    "contains": "37500 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "37490 ml",
+        "max_contains_weight": "50 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "cup_plastic",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "plastic cup" },
     "description": "A small, vacuum formed cup.",
@@ -798,13 +816,23 @@
     "symbol": ")",
     "color": "light_cyan",
     "contains": "250 ml",
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "resealable": false,
+        "open_container": true,
+        "max_contains_volume": "37490 ml",
+        "max_contains_weight": "50 kg"
+      }
+    ],
     "unseals_into": "cup_plastic_unsealed"
   },
   {
     "id": "cup_plastic_unsealed",
     "copy-from": "cup_plastic",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "name": { "str": "opened plastic cup" },
     "description": "A small, vacuum formed cup, essentially trash.",
     "symbol": ")",
