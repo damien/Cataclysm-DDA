@@ -392,7 +392,7 @@
   },
   {
     "id": "box_small",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "small cardboard box", "str_pl": "small cardboard boxes" },
     "description": "A small cardboard box.  No bigger than a foot in dimension.",
@@ -414,7 +414,7 @@
   },
   {
     "id": "box_medium",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "cardboard box", "str_pl": "cardboard boxes" },
     "description": "A sturdy cardboard box, about the size of a banana box.  Great for packing.",
@@ -461,7 +461,7 @@
   },
   {
     "id": "bucket",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "bucket" },
     "description": "A galvanized bucket for peanuts, chilled wine, iced beer, lobster, crab legs, French fries, animal feed, farm use, tailgating, crafts, planting flowers, holding gift baskets, containing a fruit basket and herbs, loose item storage or as an ice bucket.",
@@ -485,7 +485,7 @@
   },
   {
     "id": "camelbak",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "hydration pack" },
     "description": "A slim and lightweight insulated plastic bladder worn on the back.  It has a large pocket and a capped mouth for filling with liquid with a hose that allows the wearer to drink hands-free.",
@@ -842,55 +842,78 @@
   },
   {
     "id": "flask_glass",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "glass flask" },
     "description": "A 250 ml laboratory conical flask, with a rubber bung.",
     "weight": "48 g",
-    "volume": "250 ml",
+    "volume": "251 ml",
     "price": 400,
     "to_hit": 1,
     "bashing": 3,
     "material": "glass",
     "symbol": ")",
     "color": "light_cyan",
-    "contains": "250 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 1 ] ]
   },
   {
     "id": "test_tube",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "test tube" },
     "description": "A 10ml laboratory cylindrical test tube, with a rubber stopper.",
     "weight": "36 g",
-    "volume": "10ml",
+    "volume": "11ml",
     "price": 300,
     "to_hit": -1,
     "bashing": 1,
     "material": "glass",
     "symbol": ")",
     "color": "light_cyan",
-    "contains": "10ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "10 ml",
+        "max_contains_weight": "50 g"
+      }
+    ],
     "qualities": [ [ "BOIL", 1 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "beaker",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "beaker" },
     "description": "A 250ml laboratory beaker.  Basically a cup with delusions of grandeur.",
     "weight": "150 g",
-    "volume": "250ml",
+    "volume": "251ml",
     "price": 500,
     "to_hit": -1,
     "material": "glass",
     "symbol": ")",
     "color": "light_cyan",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "open_container": true,
+        "resealable": false,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg"
+      }
+    ],
     "contains": "250ml",
     "seals": false,
     "watertight": true,
@@ -898,84 +921,110 @@
   },
   {
     "id": "gradcylinder",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "graduated cylinder" },
     "description": "A tall, narrow glass cylinder with precise markings for measuring fluid quantities.  An important science tool, it is also useful for anal retentive chefs.",
     "weight": "150 g",
-    "volume": "100ml",
+    "volume": "101ml",
     "price": 500,
     "to_hit": -1,
     "material": "glass",
     "symbol": "|",
     "color": "light_cyan",
-    "contains": "100ml",
-    "seals": false,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "open_container": true,
+        "resealable": false,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "500 g"
+      }
+    ],
     "qualities": [ [ "BOIL", 1 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "test_tube_micro",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "microcentrifuge tube" },
     "description": "These plastic tubes, with little built in snap-caps, are a great way to store a tiny amount of liquid.  Great for jello shooters if 1mL is enough for a shot for you.  Cool people call these \"eppies\".",
     "weight": "1 g",
-    "volume": "1ml",
+    "volume": "2ml",
     "price": 10,
     "to_hit": -1,
     "material": "plastic",
     "symbol": "v",
     "color": "light_cyan",
-    "contains": "1ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "1 ml",
+        "max_contains_weight": "5 g"
+      }
+    ],
     "qualities": [ [ "BOIL", 1 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "flask_hip",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "hip flask" },
     "description": "A 250 ml metal flask with a hinged screw-on lid, commonly used to discreetly transport alcohol.",
     "weight": "120 g",
-    "volume": "250 ml",
+    "volume": "251 ml",
     "price": 1000,
     "to_hit": 1,
     "bashing": 3,
     "material": "iron",
     "symbol": ")",
     "color": "light_gray",
-    "contains": "250 ml",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg"
+      }
+    ],
     "armor_data": { "covers": [ "LEG_EITHER" ], "coverage": 2, "material_thickness": 1 },
     "qualities": [ [ "BOIL", 1 ] ],
     "flags": [ "WAIST", "OVERSIZE", "WATER_FRIENDLY" ]
   },
   {
     "id": "jar_3l_glass",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "3L glass jar" },
     "description": "A three-liter glass jar with a metal screw top lid, used for canning.",
     "weight": "365 g",
-    "volume": "3 L",
+    "volume": "3003 ml",
     "price": 0,
     "to_hit": -1,
     "bashing": 5,
     "material": "glass",
     "symbol": ")",
     "color": "light_cyan",
-    "contains": "3 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "6 kg"
+      }
+    ],
     "qualities": [ [ "CONTAIN", 1 ], [ "BOIL", 1 ] ]
   },
   {
     "id": "jar_3l_glass_sealed",
     "copy-from": "jar_3l_glass",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "name": { "str": "sealed 3L glass jar" },
     "description": "A three-liter glass jar with a metal screw top lid, used for canning.  Sealed tightly to preserve contents from rot.",
     "symbol": ")",
