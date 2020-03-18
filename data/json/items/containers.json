@@ -1340,7 +1340,7 @@
   },
   {
     "id": "waterskin",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "small waterskin" },
     "description": "A small watertight leather bag with a carrying strap, can hold 1.5 liters of water.",
