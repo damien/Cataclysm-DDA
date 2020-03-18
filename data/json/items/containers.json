@@ -1167,45 +1167,57 @@
   },
   {
     "id": "keg",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "aluminum keg" },
     "description": "A reusable lightweight aluminum keg, used for shipping beer.  It has a capacity of 50 liters.",
     "weight": "5040 g",
-    "volume": "50 L",
+    "volume": "50050 ml",
     "price": 10000,
     "to_hit": -5,
     "bashing": 10,
     "material": "aluminum",
     "symbol": ")",
     "color": "light_cyan",
-    "contains": "50 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "6 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "keg_steel",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "steel keg" },
     "description": "A reusable heavy steel keg, used for shipping beer.  It has a capacity of 50 liters.",
     "weight": "12600 g",
-    "volume": "50 L",
+    "volume": "50050 ml",
     "price": 8000,
     "to_hit": -5,
     "bashing": 10,
     "material": "steel",
     "symbol": ")",
     "color": "light_cyan",
-    "contains": "50 L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "6 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "large_stomach_sealed",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "large sealed stomach" },
     "description": "The stomach of a large creature, cleaned and sealed with strings.  It can hold 3 liters of water.",
@@ -1218,46 +1230,63 @@
     "material": "gutskin",
     "symbol": ")",
     "color": "brown",
-    "contains": "3 L",
-    "seals": true,
-    "watertight": true
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "6 kg"
+      }
+    ]
   },
   {
     "id": "metal_tank",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "metal tank (60L)", "str_pl": "metal tanks (60L)" },
     "description": "A large metal tank for holding liquids.  Useful for crafting.",
     "weight": "5668 g",
-    "volume": "60L",
+    "volume": "60050 ml",
     "price": 10000,
     "to_hit": -4,
     "bashing": 6,
     "material": [ "steel" ],
     "symbol": "}",
     "color": "light_cyan",
-    "contains": "60L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "60 L",
+        "max_contains_weight": "120 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
     "id": "metal_tank_little",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "metal tank (2L)", "str_pl": "metal tanks (2L)" },
     "description": "A small metal tank for gas or liquids.  Useful for crafting.",
     "weight": "800 g",
-    "volume": "2L",
+    "volume": "2010 ml",
     "price": 1000,
     "to_hit": -4,
     "bashing": 5,
     "material": "steel",
     "symbol": "}",
     "color": "light_cyan",
-    "contains": "2L",
-    "seals": true,
-    "watertight": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg"
+      }
+    ],
     "qualities": [ [ "BOIL", 2 ], [ "CONTAIN", 1 ] ]
   },
   {
