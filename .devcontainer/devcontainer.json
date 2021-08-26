@@ -12,6 +12,9 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
 
+	"workspaceMount": "source=source--catacysml-dda,target=/workspace,type=volume",
+	"workspaceFolder": "/workspace",
+
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"cschlosser.doxdocgen",
