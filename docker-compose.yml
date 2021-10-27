@@ -1,0 +1,25 @@
+---
+version: "3.9"
+
+services:
+  devcontainer:
+    build:
+      context: "."
+      dockerfile: ".devcontainer/Dockerfile"
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      # Docker filesystem performance is poor, so we create and mount a Docker volume.
+      # The "source-code" volume will persist our project's source tree and be where all
+      # development within the devcontainer happens.
+      #
+      # See: https://code.visualstudio.com/remote/advancedcontainers/improve-performance#_use-a-named-volume-for-your-entire-source-tree
+      - source-code:/workspace
+    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+volumes:
+  source-code:

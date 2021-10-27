@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.5/containers/ubuntu
+{
+	"name": "CDDA Devcontainer",
+
+  // VS Code can only connect to a single service at a time,
+  // which is fine for most purposes but may be an issue for anyone who
+  // wishes to attach to multiple containers. If you have a need to connect
+  // to multiple services defined by Docker compose, reference the following
+  // docs to see how this can be done through VS Code.
+  //
+  // See: https://code.visualstudio.com/docs/remote/create-dev-container#_use-docker-compose
+  // See: https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development
+  // See: https://code.visualstudio.com/remote/advancedcontainers/connect-multiple-containers
+  "dockerComposeFile": "../docker-compose.yml",
+
+  // Name of the Docker Compose service we want VS Code to attach to.
+  "service": "devcontainer",
+
+  "workspaceFolder": "/workspace",
+
+  // Uncomment the "shutdownAction" line if you want VS Code to leave
+  // the Docker Compose services running after you exit VS Code.
+  // VS Code defaults to stopping all Docker Compose services
+  // when exiting the editor.
+  //
+  // "shutdownAction": "none",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+
+	// Add the IDs of extensions you want installed when the container is created.
+  // By default we've added extensions useful for working with C++, JSON, YAML, and Markdown
+	"extensions": [
+		"editorconfig.editorconfig"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo chown vscode:vscode /workspace",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
