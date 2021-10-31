@@ -8,6 +8,10 @@ services:
       dockerfile: ".devcontainer/Dockerfile"
       args:
         DEFAULT_PYTHON_VERSION: "3.10.0"
+    # Note: Defining an environment variable without a value will cause the container to inherit
+    # environment variables from the same shell that Docker was run from.
+    environment:
+      GITHUB_TOKEN:
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
