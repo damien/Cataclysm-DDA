@@ -33,7 +33,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
   // By default we've added extensions useful for working with C++, JSON, YAML, and Markdown
 	"extensions": [
-		"editorconfig.editorconfig"
+		"editorconfig.editorconfig",
+		"graphql.vscode-graphql"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
